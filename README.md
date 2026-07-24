@@ -1,5 +1,7 @@
 # verify-gate-loop
 
+![license MIT](https://img.shields.io/badge/license-MIT-green) ![python 3.9+](https://img.shields.io/badge/python-3.9+-blue) ![dependencies none](https://img.shields.io/badge/dependencies-none-brightgreen) ![tests 11 passing](https://img.shields.io/badge/tests-11%20passing-brightgreen) ![built from a lecture](https://img.shields.io/badge/built%20from-a%20lecture-8A2BE2)
+
 **An agent loop where the third step — verify — is a gate, not an afterthought.**
 
 `gather context → take action → verify the work`. Every proposed action is
@@ -98,3 +100,7 @@ rollback restores state.
 ## License
 
 MIT — see [LICENSE](LICENSE). All code here is original; nothing is vendored.
+
+---
+
+Built from a real lecture, quoted verbatim with timestamps in [LECTURE.md](LECTURE.md) — not a rehash of a rehash. If it made the idea click, ⭐ it.
