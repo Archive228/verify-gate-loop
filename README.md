@@ -90,6 +90,14 @@ MIT — see [LICENSE](LICENSE). All code here is original; nothing is vendored.
 
 <div align="center">
 
+**The lecture moment this repo is built from:**
+
+<img src="assets/lecture-loop.gif" width="560" alt="Anthropic slide: gather context → take action → verify work">
+
+<sub>Anthropic — <a href="https://www.youtube.com/watch?v=OZ9NhFwVCtQ">Claude Agent SDK workshop</a> · 22:20</sub>
+
+<br><br>
+
 Built from a real lecture, quoted verbatim with timestamps in [LECTURE.md](LECTURE.md) — not a rehash of a rehash.<br>If it made the idea click, ⭐ it.
 
 </div>
