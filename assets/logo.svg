@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <rect x="4" y="4" width="120" height="120" rx="26" fill="#12161c" stroke="#2a3038" stroke-width="2"/>
+  <!-- the loop: gather -> act -> verify, running in a circle -->
+  <path d="M64 30 A34 34 0 1 1 34 47" fill="none" stroke="#e3b341" stroke-width="8" stroke-linecap="round"/>
+  <!-- arrowhead closing the loop -->
+  <path d="M64 30 L54 24 M64 30 L57 40" fill="none" stroke="#e3b341" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- the verify gate at the center -->
+  <path d="M50 64 L60 74 L80 50" fill="none" stroke="#3fb950" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

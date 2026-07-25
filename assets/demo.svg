@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="440" viewBox="0 0 900 440" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">
+  <rect x="1" y="1" width="898" height="438" rx="12" fill="#12161c" stroke="#2a3038"/>
+  <rect x="1" y="1" width="898" height="40" rx="12" fill="#1b212a"/>
+  <rect x="1" y="28" width="898" height="13" fill="#1b212a"/>
+  <line x1="1" y1="41" x2="899" y2="41" stroke="#2a3038"/>
+  <circle cx="24" cy="21" r="6" fill="#ff5f56"/>
+  <circle cx="44" cy="21" r="6" fill="#ffbd2e"/>
+  <circle cx="64" cy="21" r="6" fill="#27c93f"/>
+  <text x="88" y="26" fill="#8b949e" font-size="13">verify-gate-loop — ./run.sh</text>
+  <g font-size="14.5">
+    <text x="26" y="76"><tspan fill="#7ee787">$</tspan> <tspan fill="#e6edf3">./run.sh</tspan>   <tspan fill="#6e7681">gather → act → VERIFY (rule-based gate)</tspan></text>
+    <text x="26" y="100" fill="#6e7681">──────────────────────────────────────────────────────</text>
+    <text x="26" y="126"><tspan fill="#ffa657">step 1: REJECT</tspan> SetCell(revenue) <tspan fill="#f85149">→ column does not exist</tspan></text>
+    <text x="26" y="150"><tspan fill="#3fb950">step 2: APPLY </tspan> <tspan fill="#c9d1d9">AddColumn(margin)</tspan></text>
+    <text x="26" y="174"><tspan fill="#ffa657">step 3: REJECT</tspan> SetCell(margin)  <tspan fill="#f85149">→ write before reading it</tspan></text>
+    <text x="26" y="198"><tspan fill="#79c0ff">step 4: READ  </tspan> <tspan fill="#c9d1d9">ReadColumn(margin)</tspan></text>
+    <text x="26" y="222"><tspan fill="#ffa657">step 5: REJECT</tspan> SetCell(margin='   ') <tspan fill="#f85149">→ empty/null value</tspan></text>
+    <text x="26" y="246"><tspan fill="#3fb950">step 6-7: APPLY</tspan> <tspan fill="#c9d1d9">SetCell(margin=0.4 / 0.35)</tspan></text>
+    <text x="26" y="270"><tspan fill="#6e7681">step 8: checkpoint → </tspan><tspan fill="#3fb950">APPLY</tspan><tspan fill="#c9d1d9"> DeleteRows(region=EU)</tspan></text>
+    <text x="26" y="294" fill="#6e7681">──────────────────────────────────────────────────────</text>
+    <text x="26" y="320"><tspan fill="#c9d1d9">applied 5, rejected 3 </tspan> <tspan fill="#6e7681">— nothing bad ever touched the table</tspan></text>
+    <text x="26" y="346"><tspan fill="#c9d1d9">rollback: rows </tspan><tspan fill="#3fb950" font-weight="bold">4 → 2 → 4</tspan><tspan fill="#6e7681">   (the EU delete was checkpointed, so undo works)</tspan></text>
+    <text x="26" y="372" fill="#6e7681">──────────────────────────────────────────────────────</text>
+    <text x="26" y="398" fill="#3fb950" font-weight="bold">OK — three named mistakes blocked, valid work applied, state reversible</text>
+  </g>
+</svg>
